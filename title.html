@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Applications</title>
+
+    <link rel="icon" href="data:,">
+
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #4776a8);
+            font-family: Arial;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: white;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        table {
+            margin: auto;
+            border: 3px solid white;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        td {
+            padding: 25px;
+            width: 300px;
+            height: 250px;
+            background-color: #eaf2f8;
+            border-radius: 12px;
+            color: black;
+        }
+
+        img {
+            width: 250px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #142850;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>WELCOME</h1>
+
+    <p>PROGRAMMING LANGUAGES</p>
+
+    <table cellpadding="10">
+
+        <tr>
+            <td>
+                <h2>JAVA</h2>
+                <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java">
+            </td>
+
+            <td>
+                <h2>PYTHON</h2>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>HTML</h2>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+            </td>
+
+            <td>
+                <h2>CSS</h2>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS">
+            </td>
+        </tr>
+
+    </table>
+
+    <script>
+
+        console.log("WELCOME");
+
+        // VAR
+        var A = 20;
+        A = 40;
+        var A = 70;
+        console.log("A:", A);
+
+        // LET
+        let b = 30;
+        b = 50;
+        console.log("B:", b);
+
+        // CONST
+        const C = 60;
+        console.log("C:", C);
+
+        // AND GATE
+        let input1 = 1;
+        let input2 = 1;
+
+        let result = input1 && input2;
+
+        console.log("AND GATE");
+        console.log("Input 1:", input1);
+        console.log("Input 2:", input2);
+        console.log("Output:", result);
+
+        // IF ELSE
+        if (A == 70 && b == 50) {
+            console.log("SUCCESS");
+        }
+        else {
+            console.log("FAIL");
+        }
+
+        // STUDENT FUNCTION
+        function student(name) {
+            console.log("Hello", name);
+        }
+
+        student("Rii");
+        student("SHAMI");
+        student("THARU");
+        student("VAISH");
+
+        // EMPLOYEE FUNCTION
+        function employee(name, com, clg = "sece") {
+            console.log("Hello,", name, "Studied in the college", clg, "placed in this company", com);
+        }
+
+        employee("Rii", "HCL");
+        employee("SHAMU", "TATA GROUPS");
+        employee("THARU", "SERVICE NOW");
+        employee("VAISH", "AUTODESK");
+
+        // FUNCTION EXPRESSION
+        let data1 = function () {
+            return "Hello java script";
+        };
+
+        console.log(data1());
+
+        // ARROW FUNCTION
+        let data2 = (a, b) => {
+            return a * b;
+        };
+
+        console.log(data2(2, 3));
+
+        // CALLBACK FUNCTION
+
+        function sece(callback) {
+            console.log("Welcome to sece");
+            callback();
+        }
+
+        function studentCallback() {
+            console.log("Welcome student");
+        }
+
+        sece(studentCallback);
+
+        function whatsapp(callback) {
+            console.log("Welcome to whatsapp");
+            callback();
+        }
+
+        function notification() {
+            console.log("Notification from whatsapp");
+        }
+
+        whatsapp(notification);
+
+        // PROMISE
+
+        let apiPromise = new Promise((resolve, reject) => {
+
+            let api = true;
+
+            if (api) {
+                resolve("Fetched api data");
+            }
+            else {
+                reject("No data fetched from api");
+            }
+
+        });
+
+        apiPromise
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+
+        let food = new Promise((resolve, reject) => {
+
+            let foodAvailable = true;
+
+            if (foodAvailable) {
+                resolve("Food is available");
+            }
+            else {
+                setTimeout(() => {
+                    reject("Food is not available");
+                }, 2000);
+            }
+
+        });
+
+        food
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+
+    </script>
+
+</body>
+</html>
